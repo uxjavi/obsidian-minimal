@@ -167,19 +167,19 @@ Disabled features */
 
   --font-title:1.15em;
 
-  --h1:1.75em;
-  --h2:1.5em;
-  --h3:1.25em;
-  --h4:1em;
+  --h1:1.67em;
+  --h2:1.44em;
+  --h3:1.22em;
+  --h4:1.1em;
   --h5:1em;
   --h6:1em;
 
   --h1-weight:600;
   --h2-weight:600;
-  --h3-weight:500;
-  --h4-weight:500;
+  --h3-weight:600;
+  --h4-weight:600;
   --h5-weight:500;
-  --h6-weight:400;
+  --h6-weight:500;
 
   --normal-weight:400;   /* Switch to 300 if you want thinner default text */
   --bold-weight:600;     /* Switch to 700 if you want thicker bold text */
@@ -307,6 +307,8 @@ body {
 .theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
 .theme-dark {
 
+  --text-header:hsl(33, 26%, 78%); /* NEW */
+
   --text-normal:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 67%));
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
@@ -400,11 +402,11 @@ body {
 
 .theme-light,
 .theme-dark {
-  --h1-color:var(--text-normal);
-  --h2-color:var(--text-normal);
-  --h3-color:var(--text-normal);
-  --h4-color:var(--text-normal);
-  --h5-color:var(--text-normal);
+  --h1-color:var(--text-header);
+  --h2-color:var(--text-header);
+  --h3-color:var(--text-header);
+  --h4-color:var(--text-header);
+  --h5-color:var(--text-header);
   --h6-color:var(--text-muted);
 }
 
@@ -3316,7 +3318,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .is-collapsed .search-result-file-title,
 .tag-pane-tag {
   font-size:var(--font-adaptive-small);
-  color:var(--text-muted);
+  color:var(--text-muted); /* HERE */
 }
 .search-result-file-title {
   font-size:var(--font-adaptive-small);
@@ -4490,14 +4492,17 @@ ol {
   list-style:default;
 }
 ul > li {
-  min-height:1.4em;
+  min-height:1.5em;
 }
 ul > li::marker,
 ol > li::marker {
   color:var(--text-faint);
 }
 ol > li {
-  margin-left:0em;}
+  margin-left:0em;
+  min-height:1.5em;
+}
+  
 
 /* Code */
 
@@ -4509,7 +4514,7 @@ ol > li {
   font-size: 0.85em;
 }
 button.copy-code-button {
-  cursor:var(--curosor);
+  cursor:var(--cursor);
   box-shadow:none;
   font-size:var(--font-adaptive-smaller);
   background-color:transparent;
