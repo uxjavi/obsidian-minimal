@@ -130,9 +130,9 @@ Disabled features */
   --base-s:15%;      /* Base saturation */
   --base-d:12%;     /* Base lightness Dark Mode  - 0 is black */
   --base-l:96%;     /* Base lightness Light Mode  - 100 is white */
-  --accent-h:359;   /* Accent hue */
+  --accent-h:13;   /* Accent hue */
   --accent-s:100%;   /* Accent saturation */
-  --accent-d:65%;   /* Accent lightness Dark Mode */
+  --accent-d:59%;   /* Accent lightness Dark Mode */
   --accent-l:50%;   /* Accent lightness Light Mode */
 
   /*----------------------------------------------------------------
@@ -167,22 +167,22 @@ Disabled features */
 
   --font-title:1.15em;
 
-  --h1:1.67em;
-  --h2:1.44em;
-  --h3:1.22em;
-  --h4:1.1em;
-  --h5:1em;
-  --h6:1em;
+  --h1:1.89em;
+  --h2:1.6em;
+  --h3:1.36em;
+  --h4:1.16em;
+  --h5:1.16em;
+  --h6:1.16em;
 
-  --h1-weight:600;
-  --h2-weight:600;
-  --h3-weight:600;
-  --h4-weight:600;
+  --h1-weight:700;
+  --h2-weight:700;
+  --h3-weight:700;
+  --h4-weight:700;
   --h5-weight:500;
   --h6-weight:500;
 
   --normal-weight:400;   /* Switch to 300 if you want thinner default text */
-  --bold-weight:600;     /* Switch to 700 if you want thicker bold text */
+  --bold-weight:700;     /* Switch to 700 if you want thicker bold text */
   --line-width:40rem;    /* Maximum characters per line */
   --line-height:1.4;     /* prev 1.5 */
   --max-width:88%;       /* Amount of padding around the text, use 90% for narrower padding */
@@ -208,7 +208,13 @@ Disabled features */
   --pink:#b05279;
   --cyan:#73bbb2;
   --blue:#6c99bb;
+  
+  /* uxj New Color variables */
   --uxj-white:hsl(34deg 50% 80%); /* New */
+  --uxj-red:hsl(345, 77%, 55%);
+  --uxj-orange:hsl(13, 100%, 59%);
+  --uxj-yellow:hsl(43, 97%, 56%);
+  --uxj-blue:hsl(192, 70%, 56%);
 }
 
 /* Desktop font sizes */
@@ -314,7 +320,8 @@ body {
   --text-muted:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 45%));
   --text-faint:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
 
-  --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d));
+  /* --text-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-d)); */
+  --text-accent:var(--uxj-orange);
   --text-accent-hover:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-d) + 12%));
   --text-on-accent:white;
 
@@ -332,7 +339,8 @@ body {
   --background-secondary:hsl(var(--base-h),var(--base-s),calc(var(--base-d) - 2%));
   --background-secondary-alt:hsl(var(--base-h),var(--base-s),var(--base-d));
   --background-tertiary:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.4);
-  --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 5%));
+  /* --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 5%)); */
+  --background-modifier-border:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 10%));
   --background-modifier-border-hover:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 8%));
   --background-modifier-border-focus:hsl(var(--base-h),var(--base-s),calc(var(--base-d) + 20%));
   --background-modifier-box-shadow:rgba(0, 0, 0, 0.3);
@@ -406,11 +414,11 @@ body {
 
 .theme-light,
 .theme-dark {
-  --h1-color:var(--text-header);
-  --h2-color:var(--text-header);
-  --h3-color:var(--text-header);
-  --h4-color:var(--text-header);
-  --h5-color:var(--text-header);
+  --h1-color:var(--uxj-red);
+  --h2-color:var(--uxj-red);
+  --h3-color:var(--uxj-red);
+  --h4-color:var(--text-normal);
+  --h5-color:var(--text-normal);
   --h6-color:var(--text-muted);
 }
 
@@ -1479,7 +1487,7 @@ Desktop Styling
 /* Headings and fonts */
 
 h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
-h1,h2,h3,h4 {letter-spacing:normal;} 
+h1,h2,h3,h4 {letter-spacing:-0.03em;} 
 
 body, input, button  {
   font-family:var(--font-ui);
@@ -1536,7 +1544,7 @@ h1,
 .empty-state-title,
 .markdown-preview-view h1,
 .cm-s-obsidian .cm-header-1 {
-  letter-spacing:normal;
+  letter-spacing:-0.03em;
   line-height:1.3;
   font-size:var(--h1);
   color:var(--h1-color);
@@ -1544,7 +1552,7 @@ h1,
 }
 .markdown-preview-view h2,
 .cm-s-obsidian .cm-header-2 {
-  letter-spacing:normal;
+  letter-spacing:-0.03em;
   line-height:1.3;
   font-size:var(--h2);
   color:var(--h2-color);
@@ -1552,7 +1560,7 @@ h1,
 }
 .markdown-preview-view h3,
 .cm-s-obsidian .cm-header-3 {
-  letter-spacing:-0em;
+  letter-spacing:-0.03em;
   line-height:1.4;
   font-size:var(--h3);
   color:var(--h3-color);
@@ -1738,7 +1746,8 @@ body .view-action svg.cross path {
 a.tag {
   background-color:transparent;
   border:1px solid var(--background-modifier-border);
-  color:var(--text-muted);
+  /* color:var(--text-muted); */
+  color:var(--uxj-yellow);
   font-size:var(--font-adaptive-small);
   font-family:var(--font-ui);
   padding:2px 8px;
@@ -1749,8 +1758,10 @@ a.tag {
   border-radius:14px;
 }
 a.tag:hover {
-  color:var(--text-normal);
-  border-color:var(--background-modifier-border-hover);
+  /* color:var(--text-normal); */
+  /* border-color:var(--background-modifier-border-hover); */
+  border-color:transparent;
+  background-color: var(--background-secondary);
 }
 .cm-s-obsidian span.cm-hashtag {
   background-color:transparent;
@@ -3232,6 +3243,7 @@ input[type=checkbox]:checked {
 }
 .nav-folder-title-content {
   padding:0px 4px 1px 0;
+  color: var(--text-normal);
 }
 .nav-folder-collapse-indicator {
   top:1px;
@@ -4516,8 +4528,10 @@ ol > li {
 .markdown-preview-view code,
 .cm-s-obsidian span.cm-inline-code,
 .cm-s-obsidian .HyperMD-codeblock {
-  color:var(--text-code);
-  font-size: 0.85em;
+  color:var(--uxj-blue);
+  font-size: .85em;
+  background-color: var(--background-secondary);
+  padding: 2px;
 }
 button.copy-code-button {
   cursor:var(--cursor);
