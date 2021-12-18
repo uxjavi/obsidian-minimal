@@ -1750,22 +1750,23 @@ body .view-action svg.cross path {
 .frontmatter-container .tag,
 a.tag {
   background-color:transparent;
-  border:1px solid var(--background-modifier-border);
+  /* border:1px solid var(--background-modifier-border); */
   /* color:var(--text-muted); */
-  color:var(--uxj-yellow-100);
-  font-size:var(--font-adaptive-small);
+  color:var(--uxj-red-100);
+  font-size:var(--font-adaptive-normal);
   font-family:var(--font-ui);
-  padding:2px 8px;
+  padding:1px 6px;
   text-align:center;
   text-decoration:none;
   display:inline-block;
   margin:2px 0 0 0;
-  border-radius:14px;
+  border-radius:6px;
+  background-color: var(--background-secondary);
 }
 a.tag:hover {
-  /* color:var(--text-normal); */
-  /* border-color:var(--background-modifier-border-hover); */
-  border-color:transparent;
+  color:var(--text-normal);
+  border-color:var(--background-modifier-border-hover);
+  /* border-color:transparent; */
   background-color: var(--background-secondary);
 }
 .cm-s-obsidian span.cm-hashtag {
@@ -4404,6 +4405,11 @@ audio::-webkit-media-controls-panel {
 .frontmatter-container .frontmatter-container-header:before {
 }
 
+.frontmatter-container .frontmatter-section {
+  display: flex;
+  align-items: center;
+}
+
 /* Backlinks in Preview */
 
 .mod-root .workspace-leaf-content[data-type='markdown']  .nav-header {
@@ -4467,7 +4473,8 @@ audio::-webkit-media-controls-panel {
   border-width:0px 0px 0px 1px;
   background-color:transparent;
   color:var(--text-muted);
-  padding:0 0 0 calc(var(--nested-padding) / 2);
+  /* padding:0 0 0 calc(var(--nested-padding) / 2); */
+  padding:0 0 0 var(--nested-padding);
   margin-inline-start:var(--nested-padding);
 }
 
