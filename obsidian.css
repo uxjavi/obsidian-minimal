@@ -46,6 +46,7 @@ Plugins
   QuickAdd
   Sliding Panes aka Andy mode
   Style Settings preferences
+  Zoom
 
 Desktop Styling
 
@@ -1474,6 +1475,16 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 
 
 /* --------------- */
+/* Zoom plugin preferences */
+
+.zoom-plugin-bls-zoom .cm-editor .cm-formatting-list-ul:hover:before, .zoom-plugin-bls-zoom .cm-editor .list-bullet:hover:before {
+  font-size: 300% !important;
+  margin-top: -21px !important;
+  margin-left: -6px;
+}
+
+
+/* --------------- */
 /* Obsidian Tabs plugin */
 
 body.plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header,
@@ -2595,7 +2606,7 @@ body:not(.is-mobile).fancy-cursor .mod-cm6 .cm-cursor {
 .mod-cm6 .HyperMD-list-line .list-bullet {
   color:var(--text-faint);
   font-size:1.4em;
-  line-height:0;
+  line-height:1.3em;
 }
 
 
